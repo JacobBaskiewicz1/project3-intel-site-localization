@@ -1,3 +1,64 @@
+/* RTL and Bootstrap 3-column section custom styles */
+[dir="rtl"] .card-title {
+	direction: rtl;
+	text-align: right;
+}
+[dir="rtl"] .card-text {
+	direction: rtl;
+	text-align: right;
+}
+[dir="rtl"] .btn {
+	font-weight: 500;
+	border-radius: 2rem;
+	padding-inline: 1.5rem;
+	transition: background 0.2s, color 0.2s;
+}
+[dir="rtl"] .btn-outline-primary:hover,
+[dir="rtl"] .btn-outline-success:hover,
+[dir="rtl"] .btn-outline-info:hover {
+	color: #fff;
+}
+[dir="rtl"] .btn-outline-primary:hover {
+	background: #0071c5;
+	border-color: #0071c5;
+}
+[dir="rtl"] .btn-outline-success:hover {
+	background: #198754;
+	border-color: #198754;
+}
+[dir="rtl"] .btn-outline-info:hover {
+	background: #0dcaf0;
+	border-color: #0dcaf0;
+}
+[dir="rtl"] .card {
+	border-radius: 1rem;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+[dir="rtl"] .card-title i {
+	vertical-align: middle;
+	font-size: 1.5rem;
+	margin-left: 0.5rem;
+	margin-right: 0;
+}
+
+/* Subscription form custom styles */
+.needs-validation .form-control:invalid {
+	border-color: #dc3545;
+}
+.needs-validation .form-control:valid {
+	border-color: #198754;
+}
+
+footer {
+	font-size: 1rem;
+}
+footer a {
+	transition: color 0.2s;
+}
+footer a:hover, footer a:focus {
+	color: #00b4fc;
+	text-decoration: underline;
+}
 /* Timeline card styles using flexbox */
 .milestone {
 	display: flex;
