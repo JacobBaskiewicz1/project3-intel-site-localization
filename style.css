@@ -1,0 +1,151 @@
+/* Timeline card styles using flexbox */
+.milestone {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+	padding: 2rem 1.5rem;
+	margin-bottom: 1rem;
+	min-width: 320px;
+	max-width: 350px;
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	transition: box-shadow 0.2s;
+	border-left: 6px solid #0071c5;
+	position: relative;
+}
+.milestone:hover {
+	box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.milestone h2 {
+	margin-top: 0;
+	font-size: 1.4rem;
+	color: #0071c5;
+}
+.milestone p {
+	margin-bottom: 0;
+	color: #444;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s, max-height 0.3s;
+}
+.milestone:hover p {
+	opacity: 1;
+	max-height: 200px;
+}
+/* Style for Intel logo SVG */
+header img[src$="intel-header-logo.svg"] {
+	height: 48px; /* Adjust height as needed */
+	width: auto;
+	max-width: 180px;
+	display: block;
+	object-fit: contain;
+}
+/* Modern, sleek styles for the page */
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #f5f7fa;
+	color: #222;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: linear-gradient(90deg, #0071c5 0%, #003366 100%);
+	color: #fff;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+	border-bottom: 4px solid #00b4fc;
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Add padding between header and timeline */
+.milestones {
+	margin-top: 2.5rem;
+}
+
+header h1, header p {
+	color: #fff;
+}
+
+main {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 1rem;
+}
+
+/* Milestones container styles */
+.milestones {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	overflow-x: auto;
+	padding-bottom: 1rem;
+	scroll-snap-type: x mandatory;
+}
+
+/* Each milestone card */
+.milestone {
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+	min-width: 320px;
+	max-width: 350px;
+	flex: 0 0 auto;
+	padding: 2rem 1.5rem;
+	margin-bottom: 1rem;
+	scroll-snap-align: start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	transition: box-shadow 0.2s;
+}
+.milestone:hover {
+	box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.milestone h2 {
+	margin-top: 0;
+	font-size: 1.4rem;
+	color: #0071c5;
+}
+
+.milestone p {
+	margin-bottom: 0;
+	color: #444;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 700px) {
+	.milestones {
+		flex-direction: column;
+		gap: 1.5rem;
+		overflow-x: visible;
+		scroll-snap-type: none;
+	}
+	.milestone {
+		min-width: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+/* Add a little style to images if used */
+img {
+	max-width: 100%;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Make all images in milestone cards the same size */
+.milestone img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	margin-bottom: 1rem;
+}
